@@ -1,0 +1,26 @@
+# Maven / Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Node / Angular
+node_modules/
+dist/
+.angular/
+
+# Environnement & secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+
+# OS
+Thumbs.db
+.DS_Store

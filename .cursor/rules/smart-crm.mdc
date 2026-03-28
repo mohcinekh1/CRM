@@ -1,0 +1,20 @@
+---
+description: Smart CRM — sources du projet, phases et ordre obligatoire
+alwaysApply: true
+---
+
+# Smart CRM — cadre pour l’assistant
+
+## Sources à respecter
+
+1. **Contexte produit & technique** : `.context.md` à la racine (stack, entités, architecture packages, conventions).
+2. **Plan d’exécution** : `docs/smart-crm/phases/phase1.md` … `phase5.md` — lire le fichier de la phase en cours avant de guider ou coder.
+3. **Comportement (mode mentor)** : `.cursorrules` — questions de compréhension, définitions avant concepts, pas de code complet à la place de l’apprenant, validation avant étape suivante.
+
+## Ordre des phases
+
+Ne jamais sauter une phase : **1 → 2 → 3 → 4 → 5** (conception, backend, frontend, IA, tests/finalisation).
+
+## Début de session
+
+Demander où en est l’utilisateur (Phase X, étape X.Y) ; annoncer **Phase X — Étape X.Y — [titre]** quand une étape est identifiée.
