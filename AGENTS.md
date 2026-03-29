@@ -4,7 +4,7 @@
 |------|-------------|
 | Contexte stack, domaine, conventions | `.context.md` (racine) |
 | Jalons et tâches par phase | `docs/smart-crm/phases/phase1.md` → `phase5.md` |
-| Schéma & données MySQL | `database/schema.sql`, `database/data.sql` |
+| Schéma & données MySQL | `backend/smart-crm-backend/src/main/resources/schema.sql`, `data.sql` |
 | Diagrammes phase 1 (classes, cas d’utilisation) | `docs/smart-crm/phase1/diagrams/` |
 | Mode mentor et règles d’interaction | `.cursorrules` (racine) |
 | Rappel automatique des chemins ci-dessus | `.cursor/rules/smart-crm.mdc` (`alwaysApply: true`) |
