@@ -6,6 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import org.example.smartcrmbackend.enums.CustomerState;
 
@@ -31,9 +32,31 @@ public class Customer {
     @Enumerated(EnumType.STRING)
     @Column(name = "customer_state", nullable = false, length = 20)
     private CustomerState customerState = CustomerState.ACTIF;
+
     @OneToMany(mappedBy = "customer")
+    @JsonIgnore
+    @Builder.Default
+    private List<Interaction> interactions = new ArrayList<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "customer_segments",
+            joinColumns = @JoinColumn(name = "customer_id"),
+            inverseJoinColumns = @JoinColumn(name = "segment_id")
+    )
+    @Builder.Default
+    private List<Segment> segments = new ArrayList<>();
+
+    @OneToMany(mappedBy = "customer")
+    @JsonIgnore
     @Builder.Default
     private List<CustomerScore> customerScores = new ArrayList<>();
+
+    @OneToMany(mappedBy = "customer")
+    @JsonIgnore
+    @Builder.Default
+    private List<EmailLog> emailLogs = new ArrayList<>();
+
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
